@@ -6,6 +6,8 @@ island_perimeter function
 
 def island_perimeter(grid):
     """ returns the perimeter of the island described in grid"""
+    if type(grid) is not list:
+        return
     perimeter = 0
     first = True
     for i in range(len(grid)):
