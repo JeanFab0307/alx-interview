@@ -33,7 +33,6 @@ def isWinner(x, nums):
     # The winner is determined by the number of prime numbers
     # if the count is impair Ben will win else Maria will win
     numberCount = len(searchPrime(nums[i]))
-    print(numberCount)
     if numberCount % 2 == 0:
       Ben += 1
     else:
