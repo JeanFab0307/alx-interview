@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""make change"""
+"""make change."""
 
 
 def makeChange(coins, total):
@@ -17,13 +17,10 @@ def makeChange(coins, total):
         i += 1
         for coin in coins:
             memo1 = total - coin
-            if memo1 < memo and memo1 >=0 :
+            if memo1 < memo and memo1 >= 0:
                 memo = memo1
-        if total == memo :
+        if total == memo:
             return -1
         total = memo
     if total <= 0:
         return i
-
-    
- 
