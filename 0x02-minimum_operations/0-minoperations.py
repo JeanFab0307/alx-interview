@@ -17,12 +17,14 @@ def minOperations(n):
     if n == 1:
         return 0 
 
-    a = [float('inf')] * (n + 1)
-    a[1] = 0
- 
-    for i in range(2, n + 1):
-        for j in range(1, i):
-            if i % j == 0:
-                a[i] = min(a[i], a[j] + (i // j))
+    operations = 0
+    divisor = 2
 
-    return a[n] if a[n] != float('inf') else 0
+    # Factorize the number n
+    while n > 1:
+        while n % divisor == 0:
+            operations += divisor
+            n //= divisor
+        divisor += 1
+
+    return operations
