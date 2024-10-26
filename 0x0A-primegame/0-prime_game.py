@@ -11,7 +11,7 @@ def isWinner(x, nums):
     maria = 0
     for i in range(x):
         prime = sievePrime(nums[i])
-        
+
         if len(prime) % 2 != 0:
             maria += 1
         else:
