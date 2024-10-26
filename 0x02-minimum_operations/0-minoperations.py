@@ -15,7 +15,7 @@ def minOperations(n):
              If n is impossible to achieve, returns 0.
     """
     if n == 1:
-        return 0 
+        return 0
 
     operations = 0
     divisor = 2
